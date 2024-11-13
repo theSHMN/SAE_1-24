@@ -18,7 +18,7 @@ public class HelperFunctions
         int index = _random.Next(list.Count);
         return list[index];
     }
-    
+ 
     
     public static void DisplayRoomTile(char content, ConsoleColor contentColor, ConsoleColor backgroundColor)
     {

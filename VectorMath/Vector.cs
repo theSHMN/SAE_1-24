@@ -4,8 +4,8 @@ namespace VectorMath
     {
 
         private float _x;
-        public float _y;
-        public float _z;
+        private float _y;
+        private float _z;
         
         public string Name { get; set; }
         public float X => _x;
@@ -16,13 +16,6 @@ namespace VectorMath
         public Vector(string name = null, float x = 0, float y = 0, float z = 0)
         {
             Name = name;
-            _x = x;
-            _y = y;
-            _z = z;
-        }
-
-        public void SetVectorCoordinates(float x, float y, float z)
-        {
             _x = x;
             _y = y;
             _z = z;
