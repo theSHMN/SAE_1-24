@@ -8,8 +8,6 @@ class Program
     static void Main()
     {
         
-        
-        
         //initialize vector 
         Vector v1 = new Vector("Vector1");
         Vector v2 = new Vector("Vector2");
