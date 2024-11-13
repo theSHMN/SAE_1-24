@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VectorMath")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f20e14ffca57d772e6168a44d6642e9194e4f61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62f96ddc232d8ea1985b546d81b207eaf957eeca")]
 [assembly: System.Reflection.AssemblyProductAttribute("VectorMath")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VectorMath")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

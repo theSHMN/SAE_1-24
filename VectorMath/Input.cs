@@ -2,41 +2,7 @@ namespace VectorMath;
 
 public class Input
 {
-    // public static float ParseInputToFloat(string prompt, int lowerBound = Int32.MinValue,
-    //     int upperBoound = Int32.MaxValue, bool isScalar = false)
-    // {
-    //     float outputFloat;
-    //     do
-    //     {
-    //         Write(prompt);
-    //         string input = ReadLine();
-    //         if (float.TryParse(input, out outputFloat))
-    //         {
-    //             if (outputFloat == 0 && isScalar)
-    //             {
-    //                 HelperFunctions.WriteWithColor($"Scalar cant be zero.", ConsoleColor.Red);
-    //             }
-    //             else if (outputFloat >= lowerBound && outputFloat <= upperBoound)
-    //             {
-    //                 HelperFunctions.WriteWithColor($"Valid!", ConsoleColor.Green);
-    //                 break;
-    //             }
-    //             else
-    //             {
-    //                 HelperFunctions.WriteWithColor($"Input must be in the range of {lowerBound} and {upperBoound}!",
-    //                     ConsoleColor.Red);
-    //             }
-    //         }
-    //         else
-    //         {
-    //             HelperFunctions.WriteWithColor($"Invalid. Enter valid number (float).", ConsoleColor.Red);
-    //         }
-    //     } while (true);
-    //
-    //     return outputFloat;
-    // }
-
-    // must be value type, allow , convertible between different types
+    // needs to be value type, allow comparison to bounds or scalar, must be convertible to other types 
     public static T ParseInputToNumber<T>(string prompt, T lowerBound = default, T upperBound = default,
         bool isScalar = false)
         where T : struct, IComparable, IConvertible
@@ -70,7 +36,6 @@ public class Input
             }
 
         } while (true);
-
         return outputValue;
     }
 
@@ -92,8 +57,12 @@ public class Input
         
     public static void InputCoordinates(ref Vector vector)
     {
-        vector.X = ParseInputToNumber<float>("Enter |> X <| parameters Vector = ",-100f,100f,false);
-        vector.Y = ParseInputToNumber<float>("Enter |> Y <| parameters Vector = ",-100f,100f,false);
-        vector.Z = ParseInputToNumber<float>("Enter |> Z <| parameters Vector = ",-100f,100f,false);
+        // ref to the vector instead of new instance
+        vector.SetVectorCoordinates
+        (
+            ParseInputToNumber<float>("Enter |> X <| parameters Vector = ", -100f, 100f, false),
+            ParseInputToNumber<float>("Enter |> _y <| parameters Vector = ", -100f, 100f, false),
+            ParseInputToNumber<float>("Enter |> _z <| parameters Vector = ", -100f, 100f, false)
+            );
     }
 }

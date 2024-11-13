@@ -12,7 +12,7 @@ public class HelperFunctions
 
     public static string DisplayVectors(Vector vector)
     {
-        return $"Vector {vector.Name}: X = {vector.X}: Y = {vector.Y}: Z = {vector.Z}";
+        return $"Vector {vector.Name}: X = {vector.X}: _y = {vector._y}: _z = {vector._z}";
     }
     
     public static void WriteWithColor(string text, ConsoleColor color)

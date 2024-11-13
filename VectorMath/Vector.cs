@@ -2,52 +2,40 @@ namespace VectorMath
 {
     public struct Vector
     {
-        public string Name { get; set; }
-        public float X { get; set; }
-        public float Y { get; set; }
-        public float Z { get; set; }
+
+        private float _x;
+        public float _y;
+        public float _z;
         
-        // public Vector(string name, float x, float y, float z)
-        // {
-        //     Name = name;
-        //     X = x;
-        //     Y = y;
-        //     Z = z;
-        // }
-        //
-        // public Vector()
-        // {
-        //     Name = null;
-        //     X = 0;
-        //     Y = 0;
-        //     Z = 0;
-        // }
-        //
-        // public Vector(string name)
-        // {
-        //     Name = name;
-        //     X = 0;
-        //     Y = 0;
-        //     Z = 0;
-        // }
+        public string Name { get; set; }
+        public float X => _x;
+        public float Y => _y;
+        public float Z => _z;
 
         //multipurpose constructor
         public Vector(string name = null, float x = 0, float y = 0, float z = 0)
         {
             Name = name;
-            X = x;
-            Y = y;
-            Z = z;
+            _x = x;
+            _y = y;
+            _z = z;
+        }
+
+        public void SetVectorCoordinates(float x, float y, float z)
+        {
+            _x = x;
+            _y = y;
+            _z = z;
         }
         
 
         //SqrMagnitude
         public float SquareMagnitude()
         {
-            return X * X + Y * Y + Z * Z;
+            return _x * _x + _y * _y + _z * _z;
         }
 
-        //Lenght 
+        //Length 
         public float Length()
         {
             return MathF.Sqrt(SquareMagnitude());
@@ -58,18 +46,16 @@ namespace VectorMath
             return $"{X} {Y} {Z}";
         }
         
-    
         //calculation
         public static Vector operator +(Vector v1, Vector v2)
-            => new Vector("VectorSum",v1.X + v2.X, v1.Y + v2.Y, v1.Z + v2.Z);
-
+            => new Vector("VectorSum",v1._x + v2._x, v1._y + v2._y, v1._z + v2._z);
         //Subtract
         public static Vector operator -(Vector v1, Vector v2)
-            => new Vector("VectorDifference",v1.X - v2.X, v1.Y - v2.Y, v1.Z - v2.Z);
-    
+            => new Vector("VectorDifference",v1._x - v2._x, v1._y - v2._y, v1._z - v2._z);
         //Multiply
         public static Vector operator *(Vector v1, float scalar)
-            => new Vector("VectorProduct",v1.X * scalar, v1.Y * scalar, v1.Z * scalar);
+            => new Vector("VectorProduct",v1._x * scalar, v1._y * scalar, v1._z * scalar);
+        
         
         //Distance
         public static float Distance(Vector v1, Vector v2)
