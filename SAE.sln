@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscapeRoom", "EscapeRoom\EscapeRoom.csproj", "{9BA18AB4-CDC6-45DC-952F-F1E3687BEC5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorMath", "VectorMath\VectorMath.csproj", "{577E594B-AFBA-4A74-AFFE-125AF55A58BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{9BA18AB4-CDC6-45DC-952F-F1E3687BEC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BA18AB4-CDC6-45DC-952F-F1E3687BEC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BA18AB4-CDC6-45DC-952F-F1E3687BEC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{577E594B-AFBA-4A74-AFFE-125AF55A58BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577E594B-AFBA-4A74-AFFE-125AF55A58BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577E594B-AFBA-4A74-AFFE-125AF55A58BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577E594B-AFBA-4A74-AFFE-125AF55A58BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

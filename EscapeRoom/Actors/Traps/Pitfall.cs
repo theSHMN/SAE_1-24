@@ -7,6 +7,6 @@ public class Pitfall : Actor
 
     public override void Behaviour()
     {
-        // Logic
+        WriteLine("YOU DIED!");
     }
 }

@@ -31,7 +31,7 @@ public class Grid
         for (int row = 0; row < _maxRow; row++)
         {
             HelperFunctions.WriteWithColor($" {row} ", ConsoleColor.Yellow);
-
+    
             for (int col = 0; col < _maxCol; col++)
             {
                 GridPosition position = new GridPosition(row, col);
@@ -42,11 +42,11 @@ public class Grid
                     HelperFunctions.DisplayRoomTile(actor.Symbol, actor.Color, ConsoleColor.Yellow);
                 else
                     HelperFunctions.DisplayRoomTile(' ', ConsoleColor.Black, ConsoleColor.Gray);
-                
             }
             WriteLine();
         }
-        
     }
+    
+  
 
 }

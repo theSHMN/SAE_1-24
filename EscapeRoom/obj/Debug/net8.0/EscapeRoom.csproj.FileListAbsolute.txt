@@ -12,3 +12,4 @@
 /Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/EscapeRoom/obj/Debug/net8.0/EscapeRoom.pdb
 /Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/EscapeRoom/obj/Debug/net8.0/EscapeRoom.genruntimeconfig.cache
 /Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/EscapeRoom/obj/Debug/net8.0/ref/EscapeRoom.dll
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/EscapeRoom/obj/Debug/net8.0/EscapeRoom.sourcelink.json

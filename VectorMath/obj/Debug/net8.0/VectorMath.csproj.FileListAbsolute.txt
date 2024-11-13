@@ -1,0 +1,15 @@
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/bin/Debug/net8.0/VectorMath
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/bin/Debug/net8.0/VectorMath.deps.json
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/bin/Debug/net8.0/VectorMath.runtimeconfig.json
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/bin/Debug/net8.0/VectorMath.dll
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/bin/Debug/net8.0/VectorMath.pdb
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.AssemblyInfoInputs.cache
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.AssemblyInfo.cs
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.csproj.CoreCompileInputs.cache
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.sourcelink.json
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.dll
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/refint/VectorMath.dll
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.pdb
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/VectorMath.genruntimeconfig.cache
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/VectorMath/obj/Debug/net8.0/ref/VectorMath.dll
