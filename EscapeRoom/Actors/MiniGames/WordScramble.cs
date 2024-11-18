@@ -46,7 +46,7 @@ public class WordScramble : Actor
             WriteLine("You´ve lost!"); 
         else
             WriteLine("You´ve won!"); 
-            // ENDGAME
+        IsComplete = true;
         
         
     }

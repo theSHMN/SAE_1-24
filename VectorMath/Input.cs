@@ -33,7 +33,7 @@ public class Input
                 }
                 else
                 {
-                    HelperFunctions.WriteWithColor($"Input must be in the range of {lowerBound} to {upperBound}",
+                    HelperFunctions.WriteWithColor($"Movement must be in the range of {lowerBound} to {upperBound}",
                         ConsoleColor.Red);
                 }
             }

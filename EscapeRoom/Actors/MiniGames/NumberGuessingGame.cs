@@ -35,6 +35,6 @@ public class NumberGuessingGame : Actor
             WriteLine("Press ENTER to proceed");
             ReadLine();
         } while (guess != _targetNumber);
-        //ENDGAME();
+        IsComplete = true;
     }
 }

@@ -1,3 +1,5 @@
+using EscapeRoom.Actors.Trap;
+
 namespace EscapeRoom.Actors;
 
 public class ActorManager
@@ -46,7 +48,7 @@ public class ActorManager
 
         if (allAvailablePositions.Count == 0) return null;
 
-        int randomIndex = HelperFunctions.GetRandom(0, allAvailablePositions.Count);
+        int randomIndex = GetRandom(0, allAvailablePositions.Count);
         return allAvailablePositions[randomIndex];
     }
 
@@ -84,6 +86,8 @@ public class ActorManager
 
     public Actor GetActorByName(string name) => _allActors.FirstOrDefault(actor => actor.Name == name);
 
+    
+    
 
     public void MoveActorRandomly(string actorName, int moveSteps = 1)
     {
@@ -92,6 +96,7 @@ public class ActorManager
 
         Grid.GridPosition? currentPosition = GetActorPosition(movingActor);
         if (currentPosition == null) return;
+        
 
         List<Grid.GridPosition> potentialMovePositions = new List<Grid.GridPosition>();
 
@@ -117,7 +122,7 @@ public class ActorManager
         if (potentialMovePositions.Count > 0)
         {
             Grid.GridPosition newPosition =
-                potentialMovePositions[HelperFunctions.GetRandom(0, potentialMovePositions.Count)];
+                potentialMovePositions[GetRandom(0, potentialMovePositions.Count)];
             UpdateActorPosition(movingActor, newPosition);
         }
     }

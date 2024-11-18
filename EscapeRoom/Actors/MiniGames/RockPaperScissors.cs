@@ -37,7 +37,7 @@ public class RockPaperScissors : Actor
             Hand playerChoice = PlayerChoice();
             Hand computerChoice = ComputerChoice();
 
-            WriteLine($"Player:     {playerChoice}");
+            WriteLine($"Misc:     {playerChoice}");
             WriteLine($"Computer:   {computerChoice}");
             WriteLine("Press Enter...");
             ReadLine();
@@ -48,7 +48,7 @@ public class RockPaperScissors : Actor
             if (_playerWins == WinnigScore)
             {
                 Clear();
-                HelperFunctions.WriteWithColor($"Player wins!", ConsoleColor.Green);
+                HelperFunctions.WriteWithColor($"Misc wins!", ConsoleColor.Green);
                 WriteLine();
                 ShowStat();
             }
@@ -60,7 +60,7 @@ public class RockPaperScissors : Actor
                 ShowStat();
             }
         }
-        //EndGame()
+        IsComplete = true;
     }
 
     private Hand PlayerChoice()
@@ -99,7 +99,7 @@ public class RockPaperScissors : Actor
             case (Hand.Scissors, Hand.Paper):
             case (Hand.Paper, Hand.Rock):
                 _playerWins++;
-                return $"Player wins with {playerChoice}";
+                return $"Misc wins with {playerChoice}";
 
             default:
                 _computerWins++;
@@ -114,7 +114,7 @@ public class RockPaperScissors : Actor
 
     private void ShowStat()
     {
-        HelperFunctions.WriteWithColor($"Player:     {_playerWins}", ConsoleColor.Green);
+        HelperFunctions.WriteWithColor($"Misc:     {_playerWins}", ConsoleColor.Green);
         WriteLine();
         HelperFunctions.WriteWithColor($"Computer:   {_computerWins}", ConsoleColor.Red);
         WriteLine();

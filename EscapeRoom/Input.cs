@@ -4,7 +4,7 @@ namespace EscapeRoom;
 
 public static class Input
 {
-    public static int MarkDirectionWithNumpad (string prompt)
+    public static int MarkDirectionWithInput (string prompt)
     {
         Write(prompt);
         ConsoleKeyInfo keyInfo = ReadKey(true); // Keypress without Enter
@@ -23,20 +23,13 @@ public static class Input
             ConsoleKey.D0 => 0, // Enter
             _ => -1
         };
-
     }
-    
-    
     
     // ref > By reference not by value. To update targetPosition within method.
     // Update of target position is made outside method so the variable is always up to date
     public static bool DirectionalInput(Actor playerActor, ActorManager actorManager, Grid grid, ref Grid.GridPosition targetPosition)
     {
-        
-        // grid.DisplayGrid(actorManager.GetActorPositions(), targetPosition);
-        // WriteLine();
-        
-        int direction = MarkDirectionWithNumpad("Use Numpad to mark direction and (Numpad 0) to confirm: ");
+        int direction = MarkDirectionWithInput("Use Numpad to mark direction and (Numpad 0) to confirm: ");
         WriteLine();
 
         if (direction == 0)
@@ -52,14 +45,14 @@ public static class Input
              #region Old code
     
 //     
-//     public static void DirectionalInput(Actor playerActor, ActorManager actorManager, Grid grid)
+//     public static void DirectionalInput(Actors playerActor, ActorManager actorManager, Grid grid)
 //     {
 //         //int direction = InputDirection("Use Numpad to move: ");
 //         Grid.GridPosition? currentPosition = actorManager.GetActorPosition(playerActor);
 //
 //         if (currentPosition == null)
 //         {
-//             WriteLine("Error: Actor position not found!");
+//             WriteLine("Error: Actors position not found!");
 //             return;
 //         }
 //
@@ -69,7 +62,7 @@ public static class Input
 //         {
 //             grid.DisplayGrid(actorManager.GetActorPositions(), targetPosition);
 //             WriteLine();
-//             int direction = MarkDirectionWithNumpad("Use Numpad to mark direction and (Numpad 0) to confirm: ");
+//             int direction = MarkDirectionWithInput("Use Numpad to mark direction and (Numpad 0) to confirm: ");
 //             WriteLine();
 //             
 //             
@@ -179,5 +172,42 @@ public static class Input
         } while (true);
 
         return outputInteger;
+    }
+
+    public static bool InteractionInquiry(Actor actor)
+    {
+        var options = new Dictionary<int, (string, ConsoleColor, bool)>
+        {
+            { 1, ("Yes", ConsoleColor.Green, true) },
+            { 2, ("No", ConsoleColor.Red, false) }
+        };
+
+        return MenuSelection($"Interact with {actor.Name}?", options);
+    }
+
+
+    
+    public static T MenuSelection<T>(string prompt, Dictionary<int, (string itemDescription, ConsoleColor color, T result)> options)
+    {
+        WriteWithColor(prompt, ConsoleColor.Yellow);
+
+        foreach (var option in options)
+        {
+            WriteLine();
+            WriteWithColor($"({option.Key}) - {option.Value.itemDescription}", option.Value.color);
+        }
+
+        WriteLine();
+        int input = ParseToInteger($"Enter a choice ({string.Join(", ", options.Keys)}):", options.Keys.Min(),
+            options.Keys.Max());
+
+        if (options.TryGetValue(input, out var selectedOption))
+        {
+            WriteWithColor($"({input}) - {selectedOption.itemDescription}", selectedOption.color);
+            Clear();
+            return selectedOption.result;
+        }
+        
+        throw new InvalidOperationException("Invalid");
     }
 }

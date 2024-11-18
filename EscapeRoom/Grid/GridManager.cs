@@ -6,6 +6,7 @@ public class GridManager
 {
     private ActorManager _actorManager;
     private Grid _grid;
+    
 
     public GridManager(ActorManager actorManager, Grid grid)
     {
@@ -13,17 +14,24 @@ public class GridManager
         _grid = grid;
     }
 
-    public void CheckAdjacency()
+    
+    public List<Actor> GetAdjacentActors()
     {
+        List<Actor> adjacentActors = new List<Actor>();
         List<Actor> actors = _actorManager.GetAllActors();
+        
         Actor player = _actorManager.GetActorByName("Player");
+        Grid.GridPosition? playerPosition = _actorManager.GetActorPosition(player);
+
+        if (playerPosition == null) return adjacentActors;
 
         foreach (var actor in actors)
         {
-            actor.IsCollision = false;
+            actor.IsColliding = false;
         }
 
-        Grid.GridPosition? playerPosition = _actorManager.GetActorPosition(player);
+        //Grid.GridPosition? playerPosition = _actorManager.GetActorPosition(player);
+        
         // if (playerPosition == null)
         // {
         //     WriteLine("NO PLAYER FOUND!");
@@ -31,7 +39,7 @@ public class GridManager
         // }
         // else
         // {
-        //     WriteLine($"Player Found {player.Name}");
+        //     WriteLine($"Misc Found {player.Name}");
         // }
 
         foreach (var actor in actors)
@@ -41,15 +49,15 @@ public class GridManager
             Grid.GridPosition? otherActorPosition = _actorManager.GetActorPosition(actor);
             if(otherActorPosition == null) continue;
             
-            
                 if (AreAdjacent(playerPosition, otherActorPosition))
                 {
-                    player.IsCollision = true;
-                    actor.IsCollision = true;
-                    HelperFunctions.WriteWithColor($"Player actor is near {actor.Name} actor.", ConsoleColor.Yellow);
+                    adjacentActors.Add(actor);
+                    player.IsColliding = true;
+                    actor.IsColliding = true;
                     WriteLine();
                 }
         }
+        return adjacentActors;
     }
 
     private bool AreAdjacent(Grid.GridPosition pos1, Grid.GridPosition pos2)
@@ -59,9 +67,11 @@ public class GridManager
                (Math.Abs(pos1.col - pos2.col) == 1 && pos1.row == pos2.row) ||
                (Math.Abs(pos1.row - pos2.row) == 1 && Math.Abs(pos1.col - pos2.col) == 1);
     }
+
+  
     
     
-    // private void Interact(Actor actor1, Actor actor2)
+    // private void Interact(Actors actor1, Actors actor2)
     // {
     //     
     //     if (actor1 is MiniGame miniGame1)

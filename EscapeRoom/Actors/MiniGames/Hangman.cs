@@ -50,13 +50,14 @@ public class Hangman : Actor
                 WriteLine($"You´ve already guessed the letter '{guess}'.");
             }
         }
-        //ENDGAME()
+
+        IsComplete = true;
     }
 
 
     private string GetRandomWord(string[] guessWordList)
     {
-        return HelperFunctions.GetRandomItem(guessWordList.ToList());
+        return GetRandomItem(guessWordList.ToList());
     }
 
     private void DisplayCurrentGameState()

@@ -24,24 +24,24 @@ public class Grid
         Write("   ");
         for (int col = 0; col < _maxCol; col++)
         {
-            HelperFunctions.WriteWithColor($" {col} ", ConsoleColor.Yellow);
+            WriteWithColor($" {col} ", ConsoleColor.Yellow);
         }   
         WriteLine();
         
         for (int row = 0; row < _maxRow; row++)
         {
-            HelperFunctions.WriteWithColor($" {row} ", ConsoleColor.Yellow);
+            WriteWithColor($" {row} ", ConsoleColor.Yellow);
     
             for (int col = 0; col < _maxCol; col++)
             {
                 GridPosition position = new GridPosition(row, col);
                 
                 if (markTargetPosition!= null && position.Equals(markTargetPosition))
-                    HelperFunctions.DisplayRoomTile('+', ConsoleColor.Green,ConsoleColor.Red);
+                    DisplayRoomTile('+', ConsoleColor.Green,ConsoleColor.Red);
                 else if (actorPositions.TryGetValue(position, out var actor))
-                    HelperFunctions.DisplayRoomTile(actor.Symbol, actor.Color, ConsoleColor.Yellow);
+                    DisplayRoomTile(actor.Symbol, actor.Color, ConsoleColor.Yellow);
                 else
-                    HelperFunctions.DisplayRoomTile(' ', ConsoleColor.Black, ConsoleColor.Gray);
+                    DisplayRoomTile(' ', ConsoleColor.Black, ConsoleColor.Gray);
             }
             WriteLine();
         }

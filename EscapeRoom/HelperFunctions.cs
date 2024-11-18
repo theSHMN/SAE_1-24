@@ -42,14 +42,15 @@ public class HelperFunctions
 
             if (position != null)
             {
-                WriteWithColor($"Actor Name: {actor.Name,-30} - Row/Col {position.row}/{position.col,-15} - IsColliding: {actor.IsCollision,-10} - IsComplete: {actor.IsComplete,-10}", actor.Color);
+                WriteWithColor($"Actors Name: {actor.Name,-30} - Row/Col {position.row}/{position.col,-15} - IsColliding: {actor.IsColliding,-10} - IsComplete: {actor.IsComplete,-10}", actor.Color);
             }
             else
-                WriteWithColor($"Actor Name: {actor.Name,-20} - Row/Col: 'N/A' - IsColliding: {actor.IsCollision,-15} - IsComplete: {actor.IsComplete,-10}", actor.Color);
+                WriteWithColor($"Actors Name: {actor.Name,-20} - Row/Col: 'N/A' - IsColliding: {actor.IsColliding,-15} - IsComplete: {actor.IsComplete,-10}", actor.Color);
             WriteLine();
         }
 
     }
+    
 
     public static void PrintAllActors(ActorManager actorManager)
     {
