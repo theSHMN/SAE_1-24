@@ -1,0 +1,15 @@
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/bin/Debug/net8.0/MonsterCombatSim
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/bin/Debug/net8.0/MonsterCombatSim.deps.json
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/bin/Debug/net8.0/MonsterCombatSim.runtimeconfig.json
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/bin/Debug/net8.0/MonsterCombatSim.dll
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/bin/Debug/net8.0/MonsterCombatSim.pdb
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.AssemblyInfoInputs.cache
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.AssemblyInfo.cs
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.csproj.CoreCompileInputs.cache
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.sourcelink.json
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.dll
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/refint/MonsterCombatSim.dll
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.pdb
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/MonsterCombatSim.genruntimeconfig.cache
+/Users/sahandghesmati/RiderProjects/SAE_EscapeRoom/MonsterCombatSim/obj/Debug/net8.0/ref/MonsterCombatSim.dll

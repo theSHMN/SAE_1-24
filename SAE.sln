@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorMath", "VectorMath\Ve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterCombatSimulator", "MonsterCombatSimulator\MonsterCombatSimulator.csproj", "{B29827D8-280F-48CC-A585-477697E0E5CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonsterCombatSim", "MonsterCombatSim\MonsterCombatSim.csproj", "{F372FC49-0220-4FC9-9470-79A2961B7115}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B29827D8-280F-48CC-A585-477697E0E5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B29827D8-280F-48CC-A585-477697E0E5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B29827D8-280F-48CC-A585-477697E0E5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F372FC49-0220-4FC9-9470-79A2961B7115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F372FC49-0220-4FC9-9470-79A2961B7115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F372FC49-0220-4FC9-9470-79A2961B7115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F372FC49-0220-4FC9-9470-79A2961B7115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

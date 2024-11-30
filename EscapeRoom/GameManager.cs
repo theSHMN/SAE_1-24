@@ -32,7 +32,7 @@ namespace EscapeRoom
             
             WriteLine($"Grid size selected: {gridSize}x{gridSize}");
             
-            _player = new Player("Player", 'X', ConsoleColor.Green);
+            _player = new Player("Classes", 'X', ConsoleColor.Green);
             _grid = new Grid(gridSize, gridSize);
             _actorManager = new ActorManager(_grid);
             _gridManager = new GridManager(_actorManager, _grid);

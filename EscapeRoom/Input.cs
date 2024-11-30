@@ -45,7 +45,7 @@ public static class Input
              #region Old code
     
 //     
-//     public static void DirectionalInput(Actors playerActor, ActorManager actorManager, Grid grid)
+//     public static void DirectionalInput(Actors playerActor, Manager actorManager, Grid grid)
 //     {
 //         //int direction = InputDirection("Use Numpad to move: ");
 //         Grid.GridPosition? currentPosition = actorManager.GetActorPosition(playerActor);

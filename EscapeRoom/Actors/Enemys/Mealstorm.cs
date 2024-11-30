@@ -11,11 +11,11 @@ public class Mealstorm : Actor
     
     public override void Behaviour()
     {
-        Actor player = _actorManager.GetActorByName("Player");
+        Actor player = _actorManager.GetActorByName("Classes");
 
         if (player == null)
         {
-            WriteLine("Player not found!");
+            WriteLine("Classes not found!");
             return;
         }
 
@@ -23,7 +23,7 @@ public class Mealstorm : Actor
 
         if (currentPlayerPosition == null)
         {
-            WriteLine("Player position not found!");
+            WriteLine("Classes position not found!");
             return;
         }
         _actorManager.MoveActorRandomly(player.Name,10);

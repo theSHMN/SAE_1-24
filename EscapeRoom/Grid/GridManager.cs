@@ -20,7 +20,7 @@ public class GridManager
         List<Actor> adjacentActors = new List<Actor>();
         List<Actor> actors = _actorManager.GetAllActors();
         
-        Actor player = _actorManager.GetActorByName("Player");
+        Actor player = _actorManager.GetActorByName("Classes");
         Grid.GridPosition? playerPosition = _actorManager.GetActorPosition(player);
 
         if (playerPosition == null) return adjacentActors;
